@@ -1,0 +1,357 @@
+
+\documentclass[12pt,a4paper]{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{hyperref}
+
+\geometry{margin=2.5cm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.8em}
+
+% Configuración de colores
+\definecolor{azul}{RGB}{0,82,155}
+\definecolor{gris}{RGB}{100,100,100}
+
+% Configuración de títulos
+\titleformat{\section}
+{\normalfont\Large\bfseries\color{azul}}
+{\thesection}{1em}{}
+\titleformat{\subsection}
+{\normalfont\large\bfseries\color{gris}}
+{\thesubsection}{1em}{}
+
+% Encabezado y pie de página
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\color{azul}\textbf{Informe Técnico: PC Desarrollo Videojuegos 3D}}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+\begin{center}
+    \vspace*{2cm}
+    {\Huge\bfseries\color{azul}INFORME TÉCNICO}\\[0.5cm]
+    {\Large Configuración de PC para Desarrollo de Videojuegos 3D}\\[1cm]
+    {\large \textbf{Análisis de Componentes y Justificación Técnica}}\\[2cm]
+    
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Componente} & \textbf{Especificación} \\
+        \hline
+        Procesador & AMD Ryzen 9 9950X (16 núcleos / 32 hilos) \\
+        \hline
+        Tarjeta Gráfica & NVIDIA GeForce RTX 5080 16GB \\
+        \hline
+        Memoria RAM & 64GB (2x32GB) DDR5 6000MHz CL30 \\
+        \hline
+        Placa Base & X870 / B650E Chipset (AM5) \\
+        \hline
+        Almacenamiento & 2TB NVMe SSD Gen4 \\
+        \hline
+        Refrigeración & AIO Líquida 360mm \\
+        \hline
+        Fuente de Poder & 1000W 80+ Gold ATX 3.1 \\
+        \hline
+        Gabinete & Torre con flujo de aire (Mesh) \\
+        \hline
+        Pasta Térmica & ARCTIC MX-6 \\
+        \hline
+    \end{tabular}
+    
+    \vfill
+    {\large \today}
+\end{center}
+
+\newpage
+
+\section*{Introducción}
+Este informe detalla la configuración técnica de una estación de trabajo optimizada para el desarrollo de videojuegos 3D. Cada componente ha sido seleccionado considerando los requerimientos específicos de motores de juego modernos, herramientas de desarrollo y flujos de trabajo profesionales.
+
+\section{Procesador: AMD Ryzen 9 9950X}
+
+\subsection{Características Técnicas}
+\begin{itemize}
+    \item \textbf{Arquitectura:} Zen 5
+    \item \textbf{Núcleos/Hilos:} 16 / 32
+    \item \textbf{Frecuencia:} Hasta 5.7 GHz (boost)
+    \item \textbf{Caché:} 64MB L3
+    \item \textbf{Socket:} AM5
+    \item \textbf{TDP:} 170W
+\end{itemize}
+
+\subsection{Beneficios para Desarrollo 3D}
+\begin{enumerate}
+    \item \textbf{Compilación acelerada:} Los 16 núcleos reducen drásticamente los tiempos de compilación en Unreal Engine y Unity
+    \item \textbf{Multitarea eficiente:} Permite ejecutar simultáneamente el motor de juego, software de modelado, IDE y herramientas de diseño
+    \item \textbf{Procesamiento paralelo:} Optimizado para baking de luces, exportación de assets y simulaciones
+    \item \textbf{Actualización futura:} Plataforma AM5 con soporte para próximas generaciones de procesadores
+\end{enumerate}
+
+\section{Tarjeta Gráfica: NVIDIA GeForce RTX 5080 16GB}
+
+\subsection{Características Técnicas}
+\begin{itemize}
+    \item \textbf{Memoria:} 16GB GDDR7
+    \item \textbf{Arquitectura:} Blackwell
+    \item \textbf{Interfaz:} PCIe 5.0
+    \item \textbf{Tecnologías:} DLSS 3.5, Ray Tracing
+    \item \textbf{Consumo:} 220-260W (estimado)
+\end{itemize}
+
+\subsection{Beneficios para Desarrollo 3D}
+\begin{enumerate}
+    \item \textbf{Rendimiento en viewport:} Capacidad para manejar escenas complejas con millones de polígonos
+    \item \textbf{Previsualización realista:} Ray Tracing en tiempo real dentro del editor
+    \item \textbf{Memoria suficiente:} 16GB permiten trabajar con texturas 4K/8K y assets de alta resolución
+    \item \textbf{Tecnologías específicas:} DLSS para testing de upscaling, NVENC para captura y streaming
+\end{enumerate}
+
+\section{Memoria RAM: 64GB DDR5 6000MHz CL30}
+
+\subsection{Características Técnicas}
+\begin{itemize}
+    \item \textbf{Capacidad:} 64GB (2×32GB)
+    \item \textbf{Velocidad:} 6000MHz
+    \item \textbf{Latencia:} CL30
+    \item \textbf{Configuración:} Dual Channel
+    \item \textbf{Tipo:} DDR5
+\end{itemize}
+
+\subsection{Beneficios para Desarrollo 3D}
+\begin{enumerate}
+    \item \textbf{Multitarea profesional:} Capacidad para mantener abiertos Unreal Engine 5 (8-12GB), Blender (6-10GB), Substance Painter (4-8GB), Visual Studio (2-4GB) simultáneamente
+    \item \textbf{Proyectos grandes:} Suficiente memoria para juegos AAA con assets de alta calidad
+    \item \textbf{Eliminación de cuellos de botella:} Evita el swapping a disco que ralentiza el sistema
+    \item \textbf{Futuro-proof:} DDR5 es el estándar para los próximos años
+\end{enumerate}
+
+\section{Placa Base: X870 / B650E Chipset AM5}
+
+\subsection{Características Técnicas}
+\begin{itemize}
+    \item \textbf{Chipset:} X870 / B650E
+    \item \textbf{Socket:} AM5
+    \item \textbf{PCIe:} 5.0 para GPU y SSD
+    \item \textbf{Conectividad:} USB4, WiFi 6E, 2.5G Ethernet
+    \item \textbf{Expansión:} Múltiples puertos M.2
+\end{itemize}
+
+\subsection{Beneficios para Desarrollo 3D}
+\begin{enumerate}
+    \item \textbf{Conectividad de alta velocidad:} USB4 para transferencia rápida de assets y backups
+    \item \textbf{Expansión flexible:} Espacio para añadir más almacenamiento NVMe
+    \item \textbf{Estabilidad eléctrica:} VRM robusto para alimentar el Ryzen 9 bajo carga máxima
+    \item \textbf{Compatibilidad futura:} Soporte para próximas generaciones de procesadores AMD
+\end{enumerate}
+
+\section{Almacenamiento: 2TB NVMe SSD Gen4}
+
+\subsection{Características Técnicas}
+\begin{itemize}
+    \item \textbf{Capacidad:} 2TB
+    \item \textbf{Velocidad lectura:} 7,300 MB/s
+    \item \textbf{Velocidad escritura:} 6,600 MB/s
+    \item \textbf{Interfaz:} PCIe 4.0 ×4
+    \item \textbf{Tipo:} NVMe con caché DRAM
+\end{itemize}
+
+\subsection{Beneficios para Desarrollo 3D}
+\begin{enumerate}
+    \item \textbf{Carga instantánea:} Proyectos de 100GB+ cargan en segundos
+    \item \textbf{Compilación rápida:} Escritura veloz de archivos compilados
+    \item \textbf{Asset streaming eficiente:} Texturas y modelos se cargan inmediatamente en el editor
+    \item \textbf{Espacio suficiente:} Permite almacenar múltiples proyectos grandes simultáneamente
+\end{enumerate}
+
+\section{Refrigeración: AIO Líquida 360mm}
+
+\subsection{Características Técnicas}
+\begin{itemize}
+    \item \textbf{Tipo:} Refrigeración líquida todo-en-uno
+    \item \textbf{Radiador:} 360mm
+    \item \textbf{Ventiladores:} 3 × 120mm
+    \item \textbf{Compatibilidad:} Socket AM5
+    \item \textbf{Control:} PWM para bomba y ventiladores
+\end{itemize}
+
+\subsection{Beneficios para Desarrollo 3D}
+\begin{enumerate}
+    \item \textbf{Temperaturas óptimas:} Mantiene el Ryzen 9 9950X en rangos de temperatura ideales durante cargas prolongadas
+    \item \textbf{Rendimiento sostenido:} Evita thermal throttling durante compilaciones largas o baking
+    \item \textbf{Operación silenciosa:} Menos ruido que coolers de aire de alto rendimiento
+    \item \textbf{Espacio en gabinete:} Diseño compacto que no interfiere con otros componentes
+\end{enumerate}
+
+\section{Fuente de Poder: 1000W 80+ Gold ATX 3.1}
+
+\subsection{Características Técnicas}
+\begin{itemize}
+    \item \textbf{Potencia:} 1000W
+    \item \textbf{Eficiencia:} 80+ Gold (90\% a carga típica)
+    \item \textbf{Estándar:} ATX 3.1
+    \item \textbf{Modularidad:} Cableado completamente modular
+    \item \textbf{Protecciones:} OCP, OVP, SCP, OPP, OTP
+\end{itemize}
+
+\subsection{Beneficios para Desarrollo 3D}
+\begin{enumerate}
+    \item \textbf{Estabilidad eléctrica:} Alimentación limpia y estable para componentes sensibles
+    \item \textbf{Soporte para transitorios:} ATX 3.1 maneja picos de potencia de GPU modernas
+    \item \textbf{Eficiencia energética:} Reduce costos operativos en uso prolongado
+    \item \textbf{Margen para expansión:} Permite añadir más componentes sin cambiar la fuente
+\end{enumerate}
+
+\section{Gabinete: Torre con Flujo de Aire (Mesh)}
+
+\subsection{Características Técnicas}
+\begin{itemize}
+    \item \textbf{Tipo:} Mid-Tower o Full-Tower
+    \item \textbf{Frente:} Panel mesh para entrada de aire
+    \item \textbf{Ventiladores:} Soporte para 6+ ventiladores
+    \item \textbf{Filtros:} Filtros antipolvo desmontables
+    \item \textbf{Gestión de cables:} Espacio y pasacables para organización
+\end{itemize}
+
+\subsection{Beneficios para Desarrollo 3D}
+\begin{enumerate}
+    \item \textbf{Refrigeración superior:} Flujo de aire óptimo para todos los componentes
+    \item \textbf{Accesibilidad:} Fácil instalación y mantenimiento
+    \item \textbf{Operación silenciosa:} Buen flujo de aire permite ventiladores a bajas RPM
+    \item \textbf{Durabilidad:} Menor acumulación de polvo y temperaturas más bajas
+\end{enumerate}
+
+\section{Pasta Térmica: ARCTIC MX-6}
+
+\subsection{Características Técnicas}
+\begin{itemize}
+    \item \textbf{Conductividad térmica:} 10.6 W/mK
+    \item \textbf{Viscosidad:} Baja para fácil aplicación
+    \item \textbf{Durabilidad:} 8+ años sin degradación
+    \item \textbf{No conductiva:} Segura para uso en CPU y GPU
+\end{itemize}
+
+\subsection{Beneficios para Desarrollo 3D}
+\begin{enumerate}
+    \item \textbf{Mejor transferencia térmica:} Reduce temperaturas del CPU en 3-5°C vs pastas estándar
+    \item \textbf{Estabilidad térmica:} Mantiene rendimiento consistente durante sesiones largas
+    \item \textbf{Fácil aplicación:} Consistencia ideal para principiantes y expertos
+    \item \textbf{Durabilidad:} No requiere reaplicación frecuente
+\end{enumerate}
+
+\section{Ventajas Integradas del Sistema}
+
+\subsection{Eficiencia en Flujo de Trabajo}
+\begin{itemize}
+    \item \textbf{Tiempos de compilación reducidos:} De 30-60 minutos a 10-20 minutos
+    \item \textbf{Carga rápida de proyectos:} Proyectos grandes cargan en segundos
+    \item \textbf{Multitarea sin restricciones:} No es necesario cerrar aplicaciones para liberar memoria
+    \item \textbf{Previsualización en tiempo real:} Cambios se reflejan instantáneamente en el viewport
+\end{itemize}
+
+\subsection{Compatibilidad con Software Especializado}
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Software} & \textbf{Uso en Desarrollo} & \textbf{Rendimiento} \\
+\hline
+Unreal Engine 5 & Motor principal & Excelente \\
+Unity 2022+ & Motor alternativo & Excelente \\
+Blender & Modelado 3D & Excelente \\
+Maya & Animación & Excelente \\
+Substance Painter & Texturizado & Excelente \\
+Visual Studio & Programación & Excelente \\
+Git/GitHub & Control de versiones & Excelente \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Tabla de Componentes y Precios}
+
+\begin{center}
+\large \textbf{Detalle de Componentes, Precios y Enlaces}\\[0.3cm]
+\small
+\begin{tabular}{|l|p{9cm}|r|}
+\hline
+\textbf{Componente} & \textbf{Descripción y Enlace} & \textbf{Precio} \\
+\hline
+CPU & AMD Ryzen 9 9950X (16 núcleos / 32 hilos) & \$524 \\
+& \footnotesize{\url{https://www.amazon.com/-/es/AMD-RyzenTM-9950X-procesador-desbloqueado/dp/B0D6NNRBGP}} & \\
+\hline
+GPU & NVIDIA GeForce RTX 5080 16GB & \$1,300 \\
+& \footnotesize{\url{https://www.amazon.com/-/es/Tarjeta-GIGABYTE-WINDFORCE-enfriamiento-GV-N5080WF3OC-16GD/dp/B0DS2R7N4F}} & \\
+\hline
+RAM & 64GB (2x32GB) DDR5 6000MHz CL30 & \$347 \\
+& \footnotesize{\url{https://www.amazon.com/-/es/Crucial-Pro-CP2K16G64C32U5W-escritorio-overclocking/dp/B0FQNB9WBD}} & \\
+\hline
+Placa Base & X870 / B650E Chipset (AM5) & \$209 \\
+& \footnotesize{\url{https://www.amazon.com/-/es/ROG-potencia-conmutador-dinámico-Q-Release/dp/B0DF12WKQY}} & \\
+\hline
+Almacenamiento & 2TB NVMe SSD Gen4 (WD Black SN850X) & \$307 \\
+& \footnotesize{\url{https://www.amazon.com/-/es/WD_Black-SN7100-SSD-NVMe-generación/dp/B0DN6ZQ3PD}} & \\
+\hline
+Refrigeración & AIO Líquida 360mm (Arctic Liquid Freezer III) & \$105 \\
+& \footnotesize{\url{https://www.amazon.com/-/es/ARCTIC-Congelador-Líquido-Freezer-Blanco/dp/B0DLWDJS8S}} & \\
+\hline
+Fuente & 1000W 80+ Gold ATX 3.1 & \$104 \\
+& \footnotesize{\url{www.amazon.com/-/es/alimentación-totalmente-modular-Certificada-12V-2x6/dp/B0FDVKJBML}} & \\
+\hline
+Gabinete & Torre con flujo de aire (Mesh) & \$94 \\
+& \footnotesize{\url{https://www.amazon.com/-/es/P500C-Ventiladores-preinstalados-Iluminación-enfriamiento/dp/B0F1DRXXND}} & \\
+\hline
+Pasta Térmica & ARCTIC MX-6 & \$9 \\
+& \footnotesize{\url{https://www.amazon.com/-/es/ARCTIC-MX-6-0-28-Rendimiento-Conductividad/dp/B09VDLH5M6}} & \\
+\hline
+\hline
+\textbf{TOTAL} & \textbf{Presupuesto completo del sistema} & \textbf{\$2,999} \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{1cm}
+
+\begin{center}
+\large \textbf{Distribución del Presupuesto por Categoría}\\[0.3cm]
+\begin{tabular}{|l|r|r|}
+\hline
+\textbf{Categoría} & \textbf{Monto} & \textbf{Porcentaje} \\
+\hline
+Procesador (CPU) & \$524 & 17.5\% \\
+Tarjeta Gráfica (GPU) & \$1,300 & 43.3\% \\
+Memoria (RAM) & \$347 & 11.6\% \\
+Placa Base & \$209 & 7.0\% \\
+Almacenamiento & \$307 & 10.2\% \\
+Refrigeración & \$105 & 3.5\% \\
+Fuente de Poder & \$104 & 3.5\% \\
+Gabinete & \$94 & 3.1\% \\
+Accesorios (Pasta Térmica) & \$9 & 0.3\% \\
+\hline
+\hline
+\textbf{TOTAL GENERAL} & \textbf{\$2,999} & \textbf{100\%} \\
+\hline
+\end{tabular}
+\end{center}
+
+\section*{Conclusión}
+La configuración presentada representa una inversión óptima para desarrollo profesional de videojuegos 3D. Cada componente ha sido seleccionado para:
+
+\begin{enumerate}
+    \item \textbf{Maximizar productividad} reduciendo tiempos de espera en compilación y procesamiento
+    \item \textbf{Garantizar estabilidad} durante sesiones de trabajo prolongadas
+    \item \textbf{Permitir crecimiento} con una plataforma actualizable
+    \item \textbf{Asegurar compatibilidad} con tecnologías actuales y emergentes
+\end{enumerate}
+
+Con un presupuesto total de \$2,999, este sistema ofrece una excelente relación costo-beneficio para desarrolladores profesionales. La GPU representa la mayor inversión (43.3\%), seguida por el CPU (17.5\%), reflejando la importancia del rendimiento gráfico y de procesamiento en el desarrollo 3D moderno.
+
+El rendimiento combinado de estos componentes permite a desarrolladores y estudios crear, probar y optimizar videojuegos 3D de cualquier escala con eficiencia profesional, haciendo de esta configuración una elección técnica sólida y justificada.
+
+\end{document}
