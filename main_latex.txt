@@ -51,7 +51,7 @@
         \hline
         Tarjeta Gráfica & NVIDIA GeForce RTX 5080 16GB \\
         \hline
-        Memoria RAM & 33GB (2x16GB) DDR5 6000MHz CL30 \\
+        Memoria RAM & 32GB (2x16GB) DDR5 6000MHz CL30 \\
         \hline
         Placa Base & X870 / B650E Chipset (AM5) \\
         \hline
@@ -364,5 +364,6 @@ La configuración presentada representa una inversión óptima para desarrollo p
 Con un presupuesto total de \$2,999.44, este sistema ofrece una excelente relación costo-beneficio para desarrolladores profesionales. La GPU representa la mayor inversión (48.4\%), seguida por el CPU (17.5\%), reflejando la importancia del rendimiento gráfico y de procesamiento en el desarrollo 3D moderno.
 
 El rendimiento combinado de estos componentes permite a desarrolladores y estudios crear, probar y optimizar videojuegos 3D de cualquier escala con eficiencia profesional, haciendo de esta configuración una elección técnica sólida y justificada.
+
 
 \end{document}
